@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import Navigation from './components/Navigation';
+import Notice from './components/Notice';
+import Flys from './components/Flys';
+import Login from './components/Login';
+
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import Consoleadmin from './components/Consoleadmin';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+<BrowserRouter>
+  <div className="App">
+     <header className="App-header">
+        <Navigation/>
       </header>
-    </div>
+      <Routes>
+        <Route path="/" element={<Notice/>} />
+        <Route path="/notice" element={<Notice/>} />
+        <Route path="/flys" element={<Flys/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/consoleadmin" element={<Consoleadmin/>} />
+      </Routes>
+  </div>
+</BrowserRouter>
   );
 }
 
