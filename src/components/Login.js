@@ -8,7 +8,7 @@ function Flys() {
         var form = document.getElementById("formlogin").elements;
         nArray={};
         for ( var i = 0; i < form.length; i++) {
-                if (form[i].tagName == "INPUT"){
+                if (form[i].tagName === "INPUT"){
                    nArray[form[i].id] = form[i].value;
                }
           }  

@@ -1,7 +1,7 @@
 import "../App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import React from 'react';
-import { Container,Row, Col, Button } from 'react-bootstrap';
+import { Container,Row, Col, Table } from 'react-bootstrap';
 import Axios from "axios";
 
 function Flys() {
@@ -10,67 +10,90 @@ function Flys() {
   const [flyListArrives, setFlyListArrives] = useState([]);
   const [flyListOuts, setFlyListOuts] = useState([]);
 
-  const getFlysArrives = () => {
+  useEffect(() => {
       Axios.get("http://localhost:3001/flysArrives").then((response) => {
         setFlyListArrives(response.data);
       });
-  };
 
-  const getFlysOuts = () => {
-    Axios.get("http://localhost:3001/flysOuts").then((response) => {
+      Axios.get("http://localhost:3001/flysOuts").then((response) => {
       setFlyListOuts(response.data);
     });
-  };
+  });
+
 
   return (
     <Container>
       <br/>
       <Row>
-          <Col >
-            <Button variant="primary" onClick={getFlysArrives}>
+          <Col className="employees" >
+            <h1>
                 VER VUELOS SALIDA
-            </Button>
+            </h1>
+            <Table>
+                <thead>
+                    <tr>
+                        <th>Destino</th>
+                        <th>Origen</th>
+                        <th>Comentarios</th>
+                        <th>Puerta</th>
+                        <th>Hora de llegada:</th>
+                        <th>Hora de salida:</th>
+                        <th>N° de vuelo:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {flyListOuts.map((val, key) => {
+                        return (
+                            <tr>
+                                <td>{val.destiny}</td>
+                                <td>{val.origin}</td>
+                                <td>{val.remarks}</td>
+                                <td>{val.gate}</td>
+                                <td>{val.timeArrive}</td>
+                                <td>{val.timeOut}</td>
+                                <td>{val.fligthNum}</td>
+                            </tr>
+                            );
+                        })}
+                </tbody>
+            </Table>
           </Col>
-          <Col >
-            <Button variant="primary" onClick={getFlysOuts}>
-                VER VUELOS LLEGADA
-            </Button>
-            </Col>
       </Row>
+      <br/>
+      <br/>
       <Row>
           <Col className="employees" >
-          {flyListArrives.map((val, key) => {
-                return (
-                    <div className="employee">
-                    <div>
-                        <h3>Destino: {val.destiny}</h3>
-                        <h3>Origen: {val.origin}</h3>
-                        <h3>Comentarios: {val.remarks}</h3>
-                        <h3>Puerta: {val.gate}</h3>
-                        <h3>Hora de llegada: {val.timeArrive}</h3>
-                        <h3>Hora de salida: {val.timeOut}</h3>
-                        <h3>N° de vuelo: {val.fligthNum}</h3>
-                    </div>
-                    </div>
-                );
-            })}
-          </Col>
-          <Col className="employees" >
-          {flyListOuts.map((val, key) => {
-                return (
-                    <div className="employee">
-                    <div>
-                        <h3>Destino: {val.destiny}</h3>
-                        <h3>Origen: {val.origin}</h3>
-                        <h3>Comentarios: {val.remarks}</h3>
-                        <h3>Puerta: {val.gate}</h3>
-                        <h3>Hora de llegada: {val.timeArrive}</h3>
-                        <h3>Hora de salida: {val.timeOut}</h3>
-                        <h3>N° de vuelo: {val.fligthNum}</h3>
-                    </div>
-                    </div>
-                );
-            })}
+          <h1 >
+                VER VUELOS SALIDA
+            </h1>
+          <Table>
+                <thead>
+                    <tr>
+                        <th>Destino</th>
+                        <th>Origen</th>
+                        <th>Comentarios</th>
+                        <th>Puerta</th>
+                        <th>Hora de llegada:</th>
+                        <th>Hora de salida:</th>
+                        <th>N° de vuelo:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {flyListArrives.map((val, key) => {
+                        return (
+                            <tr>
+                                <td>{val.destiny}</td>
+                                <td>{val.origin}</td>
+                                <td>{val.remarks}</td>
+                                <td>{val.gate}</td>
+                                <td>{val.timeArrive}</td>
+                                <td>{val.timeOut}</td>
+                                <td>{val.fligthNum}</td>
+                            </tr>
+                            );
+                        })}
+                </tbody>
+            </Table>
           </Col>
       </Row>
     </Container>
