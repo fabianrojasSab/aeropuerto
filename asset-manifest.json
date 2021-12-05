@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/aeropuerto/static/css/main.ce05f247.chunk.css",
-    "main.js": "/aeropuerto/static/js/main.7207a0f3.chunk.js",
-    "main.js.map": "/aeropuerto/static/js/main.7207a0f3.chunk.js.map",
+    "main.js": "/aeropuerto/static/js/main.daef9e20.chunk.js",
+    "main.js.map": "/aeropuerto/static/js/main.daef9e20.chunk.js.map",
     "runtime-main.js": "/aeropuerto/static/js/runtime-main.e98d94ca.js",
     "runtime-main.js.map": "/aeropuerto/static/js/runtime-main.e98d94ca.js.map",
-    "static/js/2.0363ade6.chunk.js": "/aeropuerto/static/js/2.0363ade6.chunk.js",
-    "static/js/2.0363ade6.chunk.js.map": "/aeropuerto/static/js/2.0363ade6.chunk.js.map",
+    "static/js/2.0b31781a.chunk.js": "/aeropuerto/static/js/2.0b31781a.chunk.js",
+    "static/js/2.0b31781a.chunk.js.map": "/aeropuerto/static/js/2.0b31781a.chunk.js.map",
     "index.html": "/aeropuerto/index.html",
     "static/css/main.ce05f247.chunk.css.map": "/aeropuerto/static/css/main.ce05f247.chunk.css.map",
-    "static/js/2.0363ade6.chunk.js.LICENSE.txt": "/aeropuerto/static/js/2.0363ade6.chunk.js.LICENSE.txt"
+    "static/js/2.0b31781a.chunk.js.LICENSE.txt": "/aeropuerto/static/js/2.0b31781a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e98d94ca.js",
-    "static/js/2.0363ade6.chunk.js",
+    "static/js/2.0b31781a.chunk.js",
     "static/css/main.ce05f247.chunk.css",
-    "static/js/main.7207a0f3.chunk.js"
+    "static/js/main.daef9e20.chunk.js"
   ]
 }
