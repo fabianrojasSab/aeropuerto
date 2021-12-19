@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form,Button, Container,} from 'react-bootstrap';
 
-function Flys() {
+function Login() {
      let nArray;
 
     function capturarDatos() {
@@ -10,6 +10,7 @@ function Flys() {
         for ( var i = 0; i < form.length; i++) {
                 if (form[i].tagName === "INPUT"){
                    nArray[form[i].id] = form[i].value;
+                   console.log(nArray)
                }
           }  
     }
@@ -42,4 +43,4 @@ function Flys() {
     );
   }
   
-  export default Flys;
+  export default Login;

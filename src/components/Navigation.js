@@ -18,9 +18,9 @@ function Navigation() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="/notice">Inicio</Nav.Link>
-                  <Nav.Link href="/flys" >Vuelos</Nav.Link>
-                  <Nav.Link href="/login">Login</Nav.Link>
+                  <Nav.Link href="notice">Inicio</Nav.Link>
+                  <Nav.Link href="flys" >Vuelos</Nav.Link>
+                  <Nav.Link href="login">Login</Nav.Link>
                 </Nav>
                 <Form className="d-flex">
                   <FormControl

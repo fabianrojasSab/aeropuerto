@@ -65,9 +65,10 @@ app.get("/flysOuts", (req, res) => {
 app.put("/update", (req, res) => {
     const idFly = req.body.idFly;
     const remark = req.body.remarks;
+    const option = req.body.option;
     db.query(
-      "UPDATE flys SET remarks = ? WHERE idFly = ?",
-      [remark, idFly],
+      "UPDATE flys SET ? = ? WHERE idFly = ?",
+      [option,remark, idFly],
       (err, result) => {
         if (err) {
           console.log(err);

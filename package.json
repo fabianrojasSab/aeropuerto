@@ -1,7 +1,7 @@
 {
-  "homepage": "https://fabianrojasSab.github.io/aeropuerto",
   "name": "aeropuerto",
   "version": "0.1.0",
+  "homepage": "https://fabianrojasSab.github.io/aeropuerto",
   "private": true,
   "dependencies": {
     "axios": "^0.24.0",
